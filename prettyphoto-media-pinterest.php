@@ -34,7 +34,8 @@ function ppm_pinterest_footer_script() {
 	$out .= 'function add_pinterest_pin_it_button() {' . "\n";
 	$out .= '  var i = jQuery(\'.pp_gallery\').find(\'li\').index(jQuery(\'.selected\'));' . "\n";
 	$out .= '  var m = jQuery(\'#fullResImage\').attr(\'src\');' . "\n";
-	$out .= '  jQuery(\'.pp_social\').append(\'<div class="pinterest"><a target="_blank" href="http://pinterest.com/pin/create/button/?url=\' + encodeURI(location.href.replace(location.hash,"")) + \'&media=\' + encodeURI(m) + \'" class="pin-it-button" count-layout="none"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></div>\');' . "\n";
+	$out .= '  var o = jQuery(\'#fullResImage\').attr(\'alt\');' . "\n";
+	$out .= '  jQuery(\'.pp_social\').append(\'<div class="pinterest"><a target="_blank" href="http://pinterest.com/pin/create/button/?url=\' + encodeURI(location.href.replace(location.hash,"")) + \'&media=\' + encodeURI(m) + \'&description=\' + encodeURI(o) + \'" class="pin-it-button" count-layout="none"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></div>\');' . "\n";
 	$out .= '}' . "\n";
 	$out .= '</script>' . "\n";
 	
